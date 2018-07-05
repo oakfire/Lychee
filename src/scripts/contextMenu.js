@@ -7,13 +7,13 @@ contextMenu = {}
 contextMenu.add = function(e) {
 
 	let items = [
-		{ title: build.iconic('image') + 'Upload Photo', fn: () => $('#upload_files').click() },
+		{ title: build.iconic('image') + i18n.t('Upload Photo'), fn: () => $('#upload_files').click() },
 		{ },
-		{ title: build.iconic('link-intact') + 'Import from Link', fn: upload.start.url },
-		{ title: build.iconic('dropbox', 'ionicons') + 'Import from Dropbox', fn: upload.start.dropbox },
-		{ title: build.iconic('terminal') + 'Import from Server', fn: upload.start.server },
+		{ title: build.iconic('link-intact') + i18n.t('Import from Link'), fn: upload.start.url },
+		{ title: build.iconic('dropbox', 'ionicons') + i18n.t('Import from Dropbox'), fn: upload.start.dropbox },
+		{ title: build.iconic('terminal') + i18n.t('Import from Server'), fn: upload.start.server },
 		{ },
-		{ title: build.iconic('folder') + 'New Album', fn: album.add }
+		{ title: build.iconic('folder') + i18n.t('New Album'), fn: album.add }
 	]
 
 	basicContext.show(items, e.originalEvent)
@@ -25,7 +25,7 @@ contextMenu.add = function(e) {
 contextMenu.settings = function(e) {
 
 	let items = [
-		{ title: build.iconic('person') + 'Change Login', fn: settings.setLogin },
+		{ title: build.iconic('person') + i18n.t('Change Login'), fn: settings.setLogin },
 		{ title: build.iconic('sort-ascending') + 'Change Sorting', fn: settings.setSorting },
 		{ title: build.iconic('dropbox', 'ionicons') + 'Set Dropbox', fn: settings.setDropboxKey },
 		{ },
@@ -33,7 +33,7 @@ contextMenu.settings = function(e) {
 		{ title: build.iconic('wrench') + 'Diagnostics', fn: () => window.open('plugins/Diagnostics/') },
 		{ title: build.iconic('align-left') + 'Show Log', fn: () => window.open('plugins/Log/') },
 		{ },
-		{ title: build.iconic('account-logout') + 'Sign Out', fn: lychee.logout }
+		{ title: build.iconic('account-logout') + i18n.t('Sign Out'), fn: lychee.logout }
 	]
 
 	basicContext.show(items, e.originalEvent)
