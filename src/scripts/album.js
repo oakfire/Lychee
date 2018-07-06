@@ -110,7 +110,7 @@ album.load = function(albumID, refresh = false) {
 
 album.parse = function() {
 
-	if (!album.json.title) album.json.title = 'Untitled'
+	if (!album.json.title) album.json.title = i18n.t('Untitled')
 
 }
 
@@ -145,11 +145,11 @@ album.add = function() {
 		body: `<p>Enter a title for the new album: <input class='text' name='title' type='text' maxlength='50' placeholder='Title' value='Untitled'></p>`,
 		buttons: {
 			action: {
-				title: 'Create Album',
+				title: i18n.t('Create Album'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}
@@ -310,11 +310,11 @@ album.setTitle = function(albumIDs) {
 		body: msg,
 		buttons: {
 			action: {
-				title: 'Set Title',
+				title: i18n.t('Set Title'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}
@@ -354,11 +354,11 @@ album.setDescription = function(albumID) {
 		body: lychee.html`<p>Please enter a description for this album: <input class='text' name='description' type='text' maxlength='800' placeholder='Description' value='$${ oldDescription }'></p>`,
 		buttons: {
 			action: {
-				title: 'Set Description',
+				title: i18n.t('Set Description'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}
@@ -387,12 +387,12 @@ album.setPublic = function(albumID, modal, e) {
 		// Album public = Editing a shared album
 		if (album.json.public==='1') {
 
-			action.title = 'Edit Sharing'
+			action.title = i18n.t('Edit Sharing')
 			text         = 'The sharing-properties of this album will be changed to the following:'
 
 		} else {
 
-			action.title = 'Share Album'
+			action.title = i18n.t('Share Album')
 			text         = 'This album will be shared with the following properties:'
 
 		}
@@ -436,7 +436,7 @@ album.setPublic = function(albumID, modal, e) {
 					fn: action.fn
 				},
 				cancel: {
-					title: 'Cancel',
+					title: i18n.t('Cancel'),
 					fn: basicModal.close
 				}
 			}
@@ -609,12 +609,12 @@ album.merge = function(albumIDs) {
 		body: msg,
 		buttons: {
 			action: {
-				title: 'Merge Albums',
+				title: i18n.t('Merge Albums'),
 				fn: action,
 				class: 'red'
 			},
 			cancel: {
-				title: "Don't Merge",
+				title: i18n.t("Don't Merge"),
 				fn: basicModal.close
 			}
 		}

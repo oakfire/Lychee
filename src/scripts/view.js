@@ -15,7 +15,7 @@ view.albums = {
 
 	title: function() {
 
-		lychee.setTitle('Albums', false)
+		lychee.setTitle(i18n.t('Albums'), false)
 
 	},
 

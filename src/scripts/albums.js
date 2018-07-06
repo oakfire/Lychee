@@ -71,32 +71,32 @@ albums._createSmartAlbums = function(data) {
 
 	data.unsorted = {
 		id       : 0,
-		title    : 'Unsorted',
-		sysdate  : data.unsorted.num + ' photos',
+		title    : i18n.t('Unsorted'),
+		sysdate  : data.unsorted.num + i18n.t(' photos'),
 		unsorted : '1',
 		thumbs   : data.unsorted.thumbs
 	}
 
 	data.starred = {
 		id      : 'f',
-		title   : 'Starred',
-		sysdate : data.starred.num + ' photos',
+		title   : i18n.t('Starred'),
+		sysdate : data.starred.num + i18n.t(' photos'),
 		star    : '1',
 		thumbs  : data.starred.thumbs
 	}
 
 	data.public = {
 		id      : 's',
-		title   : 'Public',
-		sysdate : data.public.num + ' photos',
+		title   : i18n.t('Public'),
+		sysdate : data.public.num + i18n.t(' photos'),
 		public  : '1',
 		thumbs  : data.public.thumbs
 	}
 
 	data.recent = {
 		id      : 'r',
-		title   : 'Recent',
-		sysdate : data.recent.num + ' photos',
+		title   : i18n.t('Recent'),
+		sysdate : data.recent.num + i18n.t(' photos'),
 		recent  : '1',
 		thumbs  : data.recent.thumbs
 	}

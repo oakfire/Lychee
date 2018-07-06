@@ -10,7 +10,7 @@ upload.show = function(title, files, callback) {
 		body: build.uploadModal(title, files),
 		buttons: {
 			action: {
-				title: 'Close',
+				title: i18n.t('Close'),
 				class: 'hidden',
 				fn: basicModal.close
 			}
@@ -61,19 +61,19 @@ upload.start = {
 
 					// Success
 					basicModal.close()
-					upload.notify('Upload complete')
+					upload.notify(i18n.t('Upload complete'))
 
 				} else if (error===false && warning===true) {
 
 					// Warning
 					$('.basicModal #basicModal__action.hidden').show()
-					upload.notify('Upload complete')
+					upload.notify(i18n.t('Upload complete'))
 
 				} else {
 
 					// Error
 					$('.basicModal #basicModal__action.hidden').show()
-					upload.notify('Upload complete', 'Failed to upload one or more photos.')
+					upload.notify(i18n.t('Upload complete'), 'Failed to upload one or more photos.')
 
 				}
 
@@ -418,11 +418,11 @@ upload.start = {
 			body: lychee.html`<p>This action will import all photos, folders and sub-folders which are located in the following directory. The <b>original files will be deleted</b> after the import when possible. <input class='text' name='path' type='text' maxlength='100' placeholder='Absolute path to directory' value='$${ lychee.location }uploads/import/'></p>`,
 			buttons: {
 				action: {
-					title: 'Import',
+					title: i18n.t('Import'),
 					fn: action
 				},
 				cancel: {
-					title: 'Cancel',
+					title: i18n.t('Cancel'),
 					fn: basicModal.close
 				}
 			}

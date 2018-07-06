@@ -323,7 +323,7 @@ photo.setTitle = function(photoIDs) {
 
 	}
 
-	let input = lychee.html`<input class='text' name='title' type='text' maxlength='50' placeholder='Title' value='$${ oldTitle }'>`
+	let input = lychee.html`<input class='text' name='title' type='text' maxlength='50' placeholder='${ i18n.t('Title') }' value='$${ oldTitle }'>`
 
 	if (photoIDs.length===1) msg = lychee.html`<p>Enter a new title for this photo: ${ input }</p>`
 	else                     msg = lychee.html`<p>Enter a title for all $${ photoIDs.length } selected photos: ${ input }</p>`
@@ -332,11 +332,11 @@ photo.setTitle = function(photoIDs) {
 		body: msg,
 		buttons: {
 			action: {
-				title: 'Set title',
+				title: i18n.t('Set title'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}
@@ -433,11 +433,11 @@ photo.setPublic = function(photoID, e) {
 			body: '<p>This photo is located in a public album. To make this photo private or public, edit the visibility of the associated album.</p>',
 			buttons: {
 				action: {
-					title: 'Show Album',
+					title: i18n.t('Show Album'),
 					fn: action
 				},
 				cancel: {
-					title: 'Cancel',
+					title: i18n.t('Cancel'),
 					fn: basicModal.close
 				}
 			}
@@ -497,14 +497,14 @@ photo.setDescription = function(photoID) {
 	}
 
 	basicModal.show({
-		body: lychee.html`<p>Enter a description for this photo: <input class='text' name='description' type='text' maxlength='800' placeholder='Description' value='$${ oldDescription }'></p>`,
+		body: lychee.html`<p>${i18n.t('Enter a description for this photo')}: <input class='text' name='description' type='text' maxlength='800' placeholder='Description' value='$${ oldDescription }'></p>`,
 		buttons: {
 			action: {
-				title: 'Set Description',
+				title: i18n.t('Set Description'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}
@@ -552,11 +552,11 @@ photo.editTags = function(photoIDs) {
 		body: msg,
 		buttons: {
 			action: {
-				title: 'Set Tags',
+				title: i18n.t('Set Tags'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}

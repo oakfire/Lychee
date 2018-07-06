@@ -30,5 +30,9 @@
     "jquery": "^3.2.0",
     "jquery-ui-dist": "^1.12.1",
     "mousetrap": "^1.6.0"
+  },
+  "jshintConfig": {
+    "asi": true,
+    "esversion": 6
   }
 }

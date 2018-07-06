@@ -121,11 +121,11 @@ lychee.loginDialog = function() {
 		body: msg,
 		buttons: {
 			action: {
-				title: 'Sign In',
+				title: i18n.t('Sign In'),
 				fn: lychee.login
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}

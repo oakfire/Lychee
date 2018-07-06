@@ -254,11 +254,11 @@ settings.setLogin = function() {
 		body: msg,
 		buttons: {
 			action: {
-				title: 'Change Login',
+				title: i18n.t('Change Login'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}
@@ -349,11 +349,11 @@ settings.setSorting = function() {
 		body: msg,
 		buttons: {
 			action: {
-				title: 'Change Sorting',
+				title: i18n.t('Change Sorting'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}
@@ -414,11 +414,11 @@ settings.setDropboxKey = function(callback) {
 		body: msg,
 		buttons: {
 			action: {
-				title: 'Set Dropbox Key',
+				title: i18n.t('Set Dropbox Key'),
 				fn: action
 			},
 			cancel: {
-				title: 'Cancel',
+				title: i18n.t('Cancel'),
 				fn: basicModal.close
 			}
 		}
